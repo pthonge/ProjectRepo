@@ -52,7 +52,7 @@ public class AdminDeleteBook extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         String B_Id = request.getParameter("B_Id");
-        String B_category = request.getParameter("B_category");
+        String B_category = request.getParameter("B_Category");
 
         try {
             Context ct = new InitialContext();
@@ -64,10 +64,11 @@ public class AdminDeleteBook extends HttpServlet {
             logger.info("Conntected to Database" + con);
             String query = "DELETE FROM Books WHERE B_Id=? OR B_Category=?";
             PreparedStatement pstmt = con.prepareStatement(query);
-            logger.debug("Book id entered by user:--" + B_Id);
-            logger.debug("Book category entered by user:--" + B_category);
+            logger.info("Book id entered by user:--" + B_Id);
+            logger.info("Book category entered by user:--" + B_category);
             pstmt.setString(1, B_Id);
             pstmt.setString(2, B_category);
+            logger.info("Query to remove books"+pstmt);
 
             rs = pstmt.executeUpdate();
             

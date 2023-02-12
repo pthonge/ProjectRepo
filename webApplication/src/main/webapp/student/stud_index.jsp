@@ -93,10 +93,9 @@ General Online Form<BR>
 	
 		con=ds.getConnection();
 		logger.debug("stud_index.jsp connected to database connection object:="+con);
-		String query="select B_Name,B_Author, B_Category, B_AvailableCopies from Books";
+		String query="select B_Id,B_Name,B_Author, B_Category, B_AvailableCopies from Books";
 		Statement stmt=con.createStatement();
 		rs=stmt.executeQuery(query);
-		System.out.println("ddddddddddd");
    %>
          
 
@@ -106,7 +105,7 @@ General Online Form<BR>
         </font>
         
         <table border="1">
-        <tr><td>Book Name</td><td>Book Author</td><td>Book Category</td><td>Available Copies</td></tr>
+        <tr><td>Book Id</td><td>Book Name</td><td>Book Author</td><td>Book Category</td><td>Available Copies</td></tr>
    <% 		
 		while(rs.next())
 		{
@@ -122,9 +121,13 @@ General Online Form<BR>
      %>
          <tr> 
          <td><font  style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
-        <input type="checkbox" name="bname" value=<%=rs.getString("B_Name")%> <%=checkboxState%> /><%=rs.getString("B_Name")%>           
+        <input type="checkbox" name="bname" value=<%=rs.getString("B_Id")%> <%=checkboxState%> /><%=rs.getString("B_Id")%>           
 
         <br>
+       </font>
+       </td>
+        <td>  <font  style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
+        <%=rs.getString("B_Name")%><br>
        </font>
        </td>
         <td>  <font  style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">

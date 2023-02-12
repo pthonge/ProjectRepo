@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"  errorPage="../errorpage.jsp" %>
     <!--<jsp:useBean id="AdminObj" class="com.library.admin.DisplayAll"> </jsp:useBean> -->  
-<jsp:setProperty property="*" name="AdminObj" /> -->
+<jsp:setProperty property="*" name="AdminObj" />  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -67,7 +67,7 @@ General Online Form<BR>
    <font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome Administrator</font>
   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
    <br/>
-       <img align="left" width="500px" height="300px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" />
+       <img align="left" width="400px" height="300px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" />
   
 
 </div>
@@ -109,6 +109,7 @@ General Online Form<BR>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Name</font></td>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Author</font></td>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Publication</font></td>
+                                 <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Category</font></td>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Available copies</font></td>
                         	     
                         	</tr>
@@ -122,6 +123,7 @@ General Online Form<BR>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Name()%></font></td>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Author()%></font></td>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Pub()%></font></td>
+                        	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Category()%></font></td>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getAvailable_copies()%></font></td>                        	        
                         	 </tr>
                       <% }%>
@@ -137,6 +139,6 @@ General Online Form<BR>
 
 </body>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%@ include file="../footer.html" %>
 </html>

@@ -18,6 +18,7 @@ public class DisplayAll {
     private String B_Pub;
     private int available_copies;
     private String B_ID;
+    private String B_Category;
 
     public String getB_Name() {
         return B_Name;
@@ -74,10 +75,9 @@ public class DisplayAll {
                 temp.setB_Name(rs.getString(2));
                 temp.setB_Author(rs.getString(3));
                 temp.setB_Pub(rs.getString(4));
+                temp.setB_Category(rs.getString(5));
                 temp.setAvailable_copies(rs.getInt(6));
 
-                System.out.println("allRecords.add(temp) --- executed with " + rs.getString(1) + " " + rs.getString(2) + " "
-                        + rs.getInt(6));
                 allRecords.add(temp);
             }
 
@@ -105,5 +105,13 @@ public class DisplayAll {
     public void setAvailable_copies(int available_copies) {
         this.available_copies = available_copies;
     }
+
+	public String getB_Category() {
+		return B_Category;
+	}
+
+	public void setB_Category(String b_Category) {
+		B_Category = b_Category;
+	}
 
 }

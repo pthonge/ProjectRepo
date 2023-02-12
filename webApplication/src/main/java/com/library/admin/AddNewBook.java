@@ -51,12 +51,12 @@ public class AddNewBook extends HttpServlet {
            Logger logger = Logger.getLogger(AddNewBook.class);
 
            PrintWriter out = response.getWriter();
-           String B_Id = request.getParameter("B_Id");
+          // String B_Id = request.getParameter("B_Id");
            String B_Name = request.getParameter("B_Name");
            String B_Author = request.getParameter("B_Author");
            String B_Pub = request.getParameter("B_Pub");
-           String B_category = request.getParameter("B_category");
-           String B_availableCopies = request.getParameter("B_availableCopies");
+           String B_category = request.getParameter("B_Category");
+           String B_availableCopies = request.getParameter("B_AvailableCopies");
 		   
 		   try {
 			     Context ct=new InitialContext();
