@@ -87,7 +87,7 @@ General Online Form<BR>
 		DataSource ds=(DataSource)ct.lookup("java:jboss/MySqlDS");
 		ResultSet rs;
 		Connection con=null;
-		Logger logger = Logger.getLogger("/log4j.xml");
+		Logger logger = Logger.getLogger("Admin_BookRequest.sp");
 		logger.debug(new java.util.Date()+"Logging from [**************Admin_BookRequest.jsp*************]");
     	
 	    

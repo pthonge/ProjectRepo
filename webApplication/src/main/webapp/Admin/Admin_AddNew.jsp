@@ -11,7 +11,7 @@
 	      var B_Pub=document.forms["mainForm"]["B_Pub"].value;
 	      var B_Category=document.forms["mainForm"]["B_Category"].value;
 	      var B_AvailableCopies=document.forms["mainForm"]["B_AvailableCopies"].value;
-
+       
           if (B_Name==null || B_Name=="")
           {
             alert("Book Name must be filled out");

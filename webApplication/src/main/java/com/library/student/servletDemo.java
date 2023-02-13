@@ -74,7 +74,7 @@ public class servletDemo extends HttpServlet {
                     DataSource ds=(DataSource)ct.lookup("java:jboss/MySqlDS");
                     con=ds.getConnection();
                     for (int i = 0; i < select.length; i++) {
-                        String query="update Books set B_AvailableCopies=B_AvailableCopies-1 where B_Name='"+select[i]+"'";
+                        String query="update Books set B_AvailableCopies=B_AvailableCopies-1 where B_Id='"+select[i]+"'";
                         logger.info("Updating DB records with query "+query);
                     PreparedStatement pstmt=con.prepareStatement(query);
                     pstmt.executeUpdate();

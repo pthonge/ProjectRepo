@@ -20,7 +20,6 @@
         
         float: right;
         width: 400px;
-<%@ include file="../header2.html" %>
         height:200px;
     }
 
