@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -47,9 +49,16 @@ public class servletDemo extends HttpServlet {
 		// TODO Auto-generated method stub
 		Connection con=null;
 		PrintWriter out=response.getWriter();
+		String BorroedBookName=null;
         Logger logger = Logger.getLogger(servletDemo.class);  
 		String select[] = request.getParameterValues("bname"); 
-	    logger.debug("selected books:"+select);
+	    logger.info("selected books:");
+	    
+	    String username=null;
+	    java.security.Principal principal = request.getUserPrincipal();
+	                if (principal != null) {
+	                    username= principal.getName(); // Find User by j_username.
+	                }
 
 		 out.println("<html><body><center>");
 
@@ -73,10 +82,33 @@ public class servletDemo extends HttpServlet {
                     ct = new InitialContext();
                     DataSource ds=(DataSource)ct.lookup("java:jboss/MySqlDS");
                     con=ds.getConnection();
+                    PreparedStatement pstmt=null;
+                    String B_name=null;
+
                     for (int i = 0; i < select.length; i++) {
+                        
+                        String selectQuery="select B_Name from Books where B_Id='"+select[i]+"'";
+                        pstmt=con.prepareStatement(selectQuery);
+                        ResultSet rs= pstmt.executeQuery();
+                        while(rs.next())
+                        { 
+                            B_name=rs.getString("B_Name");
+                        }
+                        
+                        
+                        String insertQuery="insert into BorrowedBook(username,B_Id,B_Name) values(?,?,?);";
+                        pstmt=con.prepareStatement(insertQuery);
+                        pstmt.setString(1, username);
+                        pstmt.setInt(2,Integer.parseInt(select[i]));
+                        pstmt.setString(3, B_name);
+                        
+                        int count=pstmt.executeUpdate();                        
                         String query="update Books set B_AvailableCopies=B_AvailableCopies-1 where B_Id='"+select[i]+"'";
                         logger.info("Updating DB records with query "+query);
-                    PreparedStatement pstmt=con.prepareStatement(query);
+                        logger.info("count="+count);
+                       
+                                
+                    pstmt=con.prepareStatement(query);
                     pstmt.executeUpdate();
                     }
                     

@@ -70,6 +70,16 @@ public class ReturnBook extends HttpServlet {
             logger.debug("User connected to database connection object:="+con);
             String query="update Books set B_AvailableCopies=B_AvailableCopies+1 where B_Name='"+B_Name+"'and B_Id='"+B_Id+"'";
             logger.info("Return book query statement:="+query);
+            ValidateSelectedBook validate = new ValidateSelectedBook();
+            int records =validate.updateReturnBookRecord(B_Id);
+            if(records==0) {
+                response.setContentType("text/html");
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Enter valid BookId and BookName');");
+                out.println("window.location.href = 'student/stud_index.jsp';");
+                out.println("</script>");
+                return;
+            }
             PreparedStatement pstmt=con.prepareStatement(query);
            int i= rs=pstmt.executeUpdate();
            if(i==0) {

@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<img src="/Web_Application/Header.jpg" alt="img" width="100%" height="60" />
-<%@ include file="/header.html" %>
-<br>
+<!-- <img src="/Web_Application/Header.jpg" alt="img" width="100%" height="60" /> -->
+<%-- <%@ include file="/header.html" %>
+ --%><br>
 <style type="text/css">
     .rightfloat
     {
@@ -37,10 +37,17 @@
         width: 200;
         
     }
+            body {
+    background-image: url("/Web_Application/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
     </style>
 </head>
 <body>
-<div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
+<!-- <div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
    <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" >
    <font align="center" style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font>
   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
@@ -68,10 +75,11 @@ General Online Form<BR>
   
 
 </div>
-</div>
-<br><br>
+</div> -->
+<br><br><br><br><br><br><br><br>
+
 <center>
-<font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
+<font  style="font-size: 20px; color: black; font-family: arial,helvetica,sans serif;">
        You don't have  access to the requested  resources
      <br>Login to System with correct credentials<br>
       

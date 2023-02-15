@@ -9,7 +9,6 @@
 <body>
 <%@ include file="../header2.html" %>
 <%@ include file="../header.html" %>
-<br><br>
 <style type="text/css">
     .rightfloat
     {
@@ -41,39 +40,57 @@
         width: 200;
         
     }
+            body {
+    background-image: url("../Admin/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
     </style>
+<%
+   String username=null;
+    java.security.Principal principal = request.getUserPrincipal();
+                if (principal != null) {
+                    username= principal.getName(); //  
+                }
+                %>             
+<div align="left">
+<font align="left"  style="font-size: 25px; color: black; font-family: arial,helvetica,sans serif;"> Welcome, <%= username %> </font></div>
+ <div align="right">
+ <a href="../logout.jsp"><font align="left"  style="font-size: 25px; color: black; font-family: arial,helvetica,sans serif;">Logout </font></a> 
+</div>
 
 
+<!-- <div align="right" class="separator"  style="color: #0900C4; font: 12pt;" > -->
+<!--    <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" > -->
 
-<div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
-   <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" >
-
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
   
   
-       <img align="right" src="../contact.jpg"  style="margin: 0 auto;display:block;" />
-       <b>Contact 
+<!--        <img align="right" src="../contact.jpg"  style="margin: 0 auto;display:block;" /> -->
+<!--        <b>Contact  -->
 
-</b><br />
-T: 1-800-841-2031<BR>
-T: 1-713-918-1371<BR>
-F: 1-713-918-8000<BR>
-General Online Form<BR>
+<!-- </b><br /> -->
+<!-- T: 1-800-841-2031<BR> -->
+<!-- T: 1-713-918-1371<BR> -->
+<!-- F: 1-713-918-8000<BR> -->
+<!-- General Online Form<BR> -->
        
-       </div>
-</div>
+<!--        </div> -->
+<!-- </div> -->
        
-  <div align="left" class="separator1"  style="color: #0900C4; font: 12pt;" >
-   <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;" >
-      <font align="center" style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font>
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
+<!--   <div align="left" class="separator1"  style="color: #0900C4; font: 12pt;" > -->
+<!--    <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;" > -->
+<!--       <font align="center" style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font> -->
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
   
-  <br/>
-       <img align="left" width="500px" height="350px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" />
+<!--   <br/> -->
+<!--        <img align="left" width="500px" height="350px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" /> -->
   
 
-</div>
-</div>
+<!-- </div> -->
+<!-- </div> -->
 <center>
   <font style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
 
@@ -82,7 +99,8 @@ General Online Form<BR>
                                 <a href="Admin_update.jsp">Update Book Status</a> |
                                 <a href="Admin_Display.jsp">Show All Books</a> |
                                  <a href="Admin_BookRequest.jsp">Requested Book</a> |
-                                 <a href="Admin_DeleteBook.jsp">Remove Book/Category</a>                                 
+                                 <a href="Admin_DeleteBook.jsp">Remove Book/Category</a> |
+                                 <a href="Admin_BorrowedBook.jsp">Borrowed Books</a>                                 
 
 </font>  
   </center>
@@ -90,7 +108,7 @@ General Online Form<BR>
      Logger logger = Logger.getLogger("Admin_index.jsp");
      logger.info("Admin_index.jsp SessionID:-"+session.getId());
   %>  
-<!--<a href="../logout.jsp">Logout</a>>-->
+<!-- <a href="../logout.jsp">Logout</a> -->
 </body>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%@ include file="../footer.html" %>

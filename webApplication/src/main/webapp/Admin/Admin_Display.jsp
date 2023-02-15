@@ -44,42 +44,49 @@
         width: 200;
         
     }
+                    body {
+    background-image: url("../Admin/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
     </style>
-    <div align="right" class="separator"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" >
-   <div align="right" class="rightfloat"  style="color: #0900C4; font:12pt; font-family: arial,helvetica,sans serif; " >
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
+<!--     <div align="right" class="separator"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" > -->
+<!--    <div align="right" class="rightfloat"  style="color: #0900C4; font:12pt; font-family: arial,helvetica,sans serif; " > -->
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
   
   
-       <img align="right" src="../contact.jpg"  style="margin: 0 auto;display:block;" />
-       <b>Contact 
+<!--        <img align="right" src="../contact.jpg"  style="margin: 0 auto;display:block;" /> -->
+<!--        <b>Contact  -->
 
-</b><br />
-T: 1-800-841-2031<BR>
-T: 1-713-918-1371<BR>
-F: 1-713-918-8000<BR>
-General Online Form<BR>
+<!-- </b><br /> -->
+<!-- T: 1-800-841-2031<BR> -->
+<!-- T: 1-713-918-1371<BR> -->
+<!-- F: 1-713-918-8000<BR> -->
+<!-- General Online Form<BR> -->
        
-       </div>
-</div>
-  <div align="left" class="separator1"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" >
-   <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;font-family: arial,helvetica,sans serif; " >
-   <font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome Administrator</font>
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
-   <br/>
-       <img align="left" width="400px" height="300px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" />
+<!--        </div> -->
+<!-- </div> -->
+<!--   <div align="left" class="separator1"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" > -->
+<!--    <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;font-family: arial,helvetica,sans serif; " > -->
+<!--    <font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome Administrator</font> -->
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
+<!--    <br/> -->
+<!--        <img align="left" width="400px" height="300px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" /> -->
   
 
-</div>
-</div>
+<!-- </div> -->
+<!-- </div> -->
 <center>
   <font style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
-
- 
+                                  <a href="Admin_index.jsp"><span><span>Home</span></span></a> |
                                <a href="Admin_AddNew.jsp"><span><span>Add New Book</span></span></a> |
                                 <a href="Admin_update.jsp">Update Book Status</a> |
-                                <a href="Admin_Display.jsp">Show All Books</a> |
                                  <a href="Admin_BookRequest.jsp">Requested Book</a> |
-                                 <a href="Admin_DeleteBook.jsp">Remove Book/Category</a>                                 
+                                 <a href="Admin_DeleteBook.jsp">Remove Book/Category</a> |
+                                 <a href="Admin_BorrowedBook.jsp">Borrowed Books</a>                                 
+                                                                 
 
 </font>  
   </center> 
@@ -99,11 +106,11 @@ General Online Form<BR>
 
                      %>
                          <center>
-                         <font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">
+                         <font  style="font-size: 20px; color: black;font-family: arial,helvetica,sans serif;">
                                      Available Books!!!! 
-                         </font><br>
+                         </font><br><br>
                         	<table border="1">
-                        	<tr>
+                        	<tr bgcolor="#ddd">
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book ID</font></td>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Name</font></td>
                         	     <td><font  style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;">Book Author</font></td>
@@ -117,7 +124,7 @@ General Online Form<BR>
                         	{	
                     %>	 
                             
-                        	<tr>
+                        	<tr bgcolor="#ddd">
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%= allRecords.get(i).getB_ID()%></font></td>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Name()%></font></td>
                         	        <td><font style="font-size: 20px; color: rgb(102, 102, 255);font-family: arial,helvetica,sans serif;"><%=allRecords.get(i).getB_Author()%></font></td>

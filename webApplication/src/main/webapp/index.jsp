@@ -37,6 +37,14 @@
         width: 200;
         
     }
+                    body {
+    background-image: url("/Web_Application/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+  
     </style>
 
 </head>
@@ -56,7 +64,7 @@
 </ul>
 
 </font>  
-<div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
+<!-- <div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
    <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" >
    <font align="center" style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font>
   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
@@ -84,9 +92,9 @@ General Online Form<BR>
   
 
 </div>
-</div>
+</div> -->
 </center>
 </body>
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%@ include file="footer.html" %>
 </html>

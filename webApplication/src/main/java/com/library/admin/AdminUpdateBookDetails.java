@@ -61,7 +61,7 @@ public class AdminUpdateBookDetails extends HttpServlet {
 			   con=ds.getConnection();
 			   logger.debug("Updating copies of book with bookID "+B_Id+"to "+B_availableCopies);
 			   logger.debug("Conntected to Database"+con); 
-			   String query="update Books set B_AvailableCopies=? where B_Id=?";
+			   String query="update Books set B_AvailableCopies=B_AvailableCopies+? where B_Id=?";
 			   PreparedStatement pstmt=con.prepareStatement(query);
 			   System.out.println(query);
 			   System.out.println("B_id="+B_Id);

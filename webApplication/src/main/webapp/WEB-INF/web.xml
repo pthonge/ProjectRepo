@@ -32,7 +32,7 @@
   <login-config>
     <!--  auth-method>BASIC</auth-method> -->
     <auth-method>FORM</auth-method>
-          <realm-name>Applicationrealm</realm-name>
+          <realm-name>exampleDbRealm</realm-name>
 		<form-login-config>
 			<form-login-page>/login.jsp</form-login-page>
 			<form-error-page>/FormLoginerrorPage.jsp</form-error-page>

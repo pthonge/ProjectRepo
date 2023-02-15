@@ -30,11 +30,14 @@
 <body>
 <center>
   <font style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
+                                 <a href="Admin_index.jsp"><span><span>Home</span></span></a> |
                                <a href="Admin_AddNew.jsp"><span><span>Add New Book</span></span></a> |
                                 <a href="Admin_update.jsp">Update Book Status</a> |
                                 <a href="Admin_Display.jsp">Show All Books</a> |
                                  <a href="Admin_BookRequest.jsp">Requested Book</a> |
-                                 <a href="Admin_DeleteBook.jsp">Remove Book/Category</a>                                 
+                                 <a href="Admin_BorrowedBook.jsp">Borrowed Books</a>                                 
+                                  
+                                                                 
 
 </font>  
   </center>
@@ -69,8 +72,15 @@
         width: 200;
         
     }
+                            body {
+    background-image: url("../Admin/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
     </style>
-    <div align="right" class="separator"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" >
+<!--     <div align="right" class="separator"  style="color: #0900C4; font: 12pt; font-family: arial,helvetica,sans serif;" >
    <div align="right" class="rightfloat"  style="color: #0900C4; font:12pt; font-family: arial,helvetica,sans serif; " >
   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
      <img align="right" src="../contact.jpg"  style="margin: 0 auto;display:block;" />
@@ -92,26 +102,25 @@ General Online Form<BR>
        <img align="left" width="500px" height="300px" src="../Library_01.jpg"  style="margin: 0 auto;display:block;" />
   
 
+</div> -->
 </div>
-</div>
-  <form name="mainForm" method="Post" action="../AdminDeleteBook"> <!-- onsubmit="return validateForm() -->
+  <form name="mainForm" method="Post" action="../AdminDeleteBook" "> <!--  onsubmit="return validateForm() -->
     <center>
     <br/><br/><br/>
 			<table border="1">
 				<tbody>
 				<thead>
-					<font
-						style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial, helvetica, sans serif;">Fill
-						the Following Details to Add New Book</font>
+					<font style="font-size: 19px; color: black; font-family: arial, helvetica, sans serif;">Enter
+						below Details to remove Book</font>
 				</thead>
-
-				<tr>
+<br/><br/>
+				<tr bgcolor="#ddd">
 					<td><font
 						style="font-size: 15px; color: rgb(102, 102, 255); font-family: arial, helvetica, sans serif;">Enter
 							the Book Id</font></td>
 					<td><input type="text" name="B_Id" /></td>
 				</tr>
-				<tr>
+				<tr bgcolor="#ddd">
 					<td><font
 						style="font-size: 15px; color: rgb(102, 102, 255); font-family: arial, helvetica, sans serif;">Enter
 							the Book Categoty</font></td>

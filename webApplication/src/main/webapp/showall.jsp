@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Guest User</title>
 <%@ include file="../header2.html" %>
-<%@ include file="../header.html" %>  
+<%-- <%@ include file="../header.html" %>   --%>
 <style type="text/css">
     .rightfloat
     {
@@ -39,38 +39,46 @@
         width: 200;
         
     }
+                        body {
+    background-image: url("/Web_Application/abstract-blur-defocused-bookshelf-library.jpg");
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+  
     </style> 
 </head>
 <body>
 
 <br/> 
- <div align="right" class="separator"  style="color: #0900C4; font: 12pt;" >
-   <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" >
-   <font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font>
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
+<!--  <div align="right" class="separator"  style="color: #0900C4; font: 12pt;" > -->
+<!--    <div align="right" class="rightfloat"  style="color: #0900C4; font:  12pt;" > -->
+<!--    <font  style="font-size: 20px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">Welcome</font> -->
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
   
   
-       <img align="right" src="contact.jpg"  style="margin: 0 auto;display:block;" />
-       <b>Contact 
+<!--        <img align="right" src="contact.jpg"  style="margin: 0 auto;display:block;" /> -->
+<!--        <b>Contact  -->
 
-</b><br />
-T: 1-800-841-2031<BR>
-T: 1-713-918-1371<BR>
-F: 1-713-918-8000<BR>
-General Online Form<BR>
+<!-- </b><br /> -->
+<!-- T: 1-800-841-2031<BR> -->
+<!-- T: 1-713-918-1371<BR> -->
+<!-- F: 1-713-918-8000<BR> -->
+<!-- General Online Form<BR> -->
        
-       </div>
-</div>  
- <div align="left" class="separator1"  style="color: #0900C4; font: 12pt;" >
-   <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;" >
+<!--        </div> -->
+<!-- </div>   -->
+<!--  <div align="left" class="separator1"  style="color: #0900C4; font: 12pt;" > -->
+<!--    <div align="left" class="rightfloat1"  style="color: #0900C4; font:  12pt;" > -->
  
-  <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p>
+<!--   <p>For the first time in history, the Digital Library of India is digitizing all the significant  works of Mankind.</p> -->
   
   
-       <img align="left" width="500px" height="350px" src="Library_01.jpg"  style="margin: 0 auto;display:block;" />
+<!--        <img align="left" width="500px" height="350px" src="Library_01.jpg"  style="margin: 0 auto;display:block;" /> -->
   
 
-</div>
+<!-- </div> -->
 </div>
 
 <form action="showall.jsp">
@@ -96,18 +104,18 @@ General Online Form<BR>
 
 %>
  <center>
-	 <font  style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
-     Available books <br>
+	 <font  style="font-size: 19px; color: black; font-family: arial,helvetica,sans serif;">
+     Available books 
   </font>
- 
+ <br><br>
   <table border="1">
   
-  <tr><td>Book Name</td><td>Book Author</td><td>Book publication</td></tr>
+  <tr bgcolor="#ddd"><td>Book Name</td><td>Book Author</td><td>Book publication</td></tr>
 <%	
 	while(rs.next())
 	{
 %>
-        <tr> 
+        <tr bgcolor="#ddd"> 
         <td>  <font  style="font-size: 19px; color: rgb(102, 102, 255); font-family: arial,helvetica,sans serif;">
         <%=rs.getString("B_Name")%><br>
        </font>
