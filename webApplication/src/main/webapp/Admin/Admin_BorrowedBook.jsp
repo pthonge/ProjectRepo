@@ -85,7 +85,7 @@ background-size: cover;
 %>
  <center>
 	 <font  style="font-size: 19px; color: black; font-family: arial,helvetica,sans serif;">
-     Borrowed books 
+     Issued books 
   </font>
  <br><br>
   <table border="1">

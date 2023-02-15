@@ -85,7 +85,7 @@ background-size: cover;
                                 <a href="Admin_update.jsp">Update Book Status</a> |
                                  <a href="Admin_BookRequest.jsp">Requested Book</a> |
                                  <a href="Admin_DeleteBook.jsp">Remove Book/Category</a> |
-                                 <a href="Admin_BorrowedBook.jsp">Borrowed Books</a>                                 
+                                 <a href="Admin_BorrowedBook.jsp">Issued Books</a>                                 
                                                                  
 
 </font>  
