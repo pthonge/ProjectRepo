@@ -111,5 +111,5 @@ background-size: cover;
 <!-- <a href="../logout.jsp">Logout</a> -->
 </body>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<%@ include file="../footer.html" %>
+<%-- <%@ include file="../footer.html" %> --%>
 </html>

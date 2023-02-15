@@ -114,5 +114,5 @@ Enter user ID and password: </font>
 </font>
        </body>
  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<%@ include file="../footer.html" %>
+<%-- <%@ include file="../footer.html" %> --%>
 </html>

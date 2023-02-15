@@ -146,5 +146,5 @@ background-size: cover;
 </body>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<%@ include file="../footer.html" %>
+<%-- <%@ include file="../footer.html" %> --%>
 </html>

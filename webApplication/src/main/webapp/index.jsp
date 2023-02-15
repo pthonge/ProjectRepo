@@ -96,5 +96,5 @@ General Online Form<BR>
 </center>
 </body>
  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<%@ include file="footer.html" %>
+<%-- <%@ include file="footer.html" %> --%>
 </html>
